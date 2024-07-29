@@ -17,6 +17,19 @@ Backend de serviço de tarefas feito em FastAPI.
 
 ## Comandos curl para testes:
 
+### POST de uma tarefa:
+```
+curl  -X POST \
+  'http://localhost:8000/api/v1/tarefas/' \
+  --header 'Accept: */*' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+  "titulo": "Nova tarefa",
+  "descricao": "Descrição de nova tarefa",
+  "status": "Pendente"
+}'
+```
+
 ### GET de todas as tarefas:
 ```
 curl  -X GET \
@@ -30,19 +43,6 @@ Substituir {IdTarefa} pela tarefa desejada.
 curl  -X GET \
   'http://localhost:8000/api/v1/tarefas/{IdTarefa}' \
   --header 'Accept: */*' \
-```
-
-### POST de uma tarefa:
-```
-curl  -X POST \
-  'http://localhost:8000/api/v1/tarefas/' \
-  --header 'Accept: */*' \
-  --header 'Content-Type: application/json' \
-  --data-raw '{
-  "titulo": "Nova tarefa",
-  "descricao": "Descrição de nova tarefa",
-  "status": "Pendente"
-}'
 ```
 
 ### PUT de uma tarefa:
@@ -65,5 +65,4 @@ Substituir {IdTarefa} pela tarefa desejada.
 curl  -X DELETE \
   'http://localhost:8000/api/v1/tarefas/2' \
   --header 'Accept: */*' \
-  --header 'User-Agent: Thunder Client (https://www.thunderclient.com)'
 ```
