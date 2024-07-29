@@ -2,12 +2,12 @@
 Backend de serviço de tarefas feito em FastAPI.
 
 ## Instruções de execução
-####1 - Instalar a versão do Python 3.9+
-####2 - Criar um diretório para o projeto com venv
-####3 - utilizar o comando pip install -r requirements.txt para a instalação das bibliotecas necessárias
-####4 - Configurar o banco de dados na string "DB_URL" do arquivo ./core/configs.py utilizando essas informações: "postgresql+asyncpg://{usuario}:{senha}@{host}:{porta}/{banco}"
-####5 - Rodar o código criar_tabelas para a criação das tabelas no banco
-####6 - Rodar o arquivo main.py para a execução do servidor local Uvicorn
+- Instalar a versão do Python 3.9+
+- Criar um diretório para o projeto com venv
+- utilizar o comando pip install -r requirements.txt para a instalação das bibliotecas necessárias
+- Configurar o banco de dados na string "DB_URL" do arquivo ./core/configs.py utilizando essas informações: "postgresql+asyncpg://{usuario}:{senha}@{host}:{porta}/{banco}"
+- Rodar o código criar_tabelas para a criação das tabelas no banco
+- Rodar o arquivo main.py para a execução do servidor local Uvicorn
 
 ## Tecnologias utilizadas
 - FastAPI
@@ -17,14 +17,14 @@ Backend de serviço de tarefas feito em FastAPI.
 
 ## Comandos curl para testes:
 
-###GET de todas as tarefas:
+### GET de todas as tarefas:
 ```
 curl  -X GET \
   'http://localhost:8000/api/v1/tarefas' \
   --header 'Accept: */*' \
 ```
 
-###GET de uma tarefa específica:
+### GET de uma tarefa específica:
 Substituir {IdTarefa} pela tarefa desejada.
 ```
 curl  -X GET \
@@ -32,7 +32,7 @@ curl  -X GET \
   --header 'Accept: */*' \
 ```
 
-###POST de uma tarefa:
+### POST de uma tarefa:
 ```
 curl  -X POST \
   'http://localhost:8000/api/v1/tarefas/' \
@@ -45,7 +45,7 @@ curl  -X POST \
 }'
 ```
 
-###PUT de uma tarefa:
+### PUT de uma tarefa:
 Substituir {IdTarefa} pela tarefa desejada.
 ```
 curl  -X PUT \
@@ -59,7 +59,7 @@ curl  -X PUT \
 }'
 ```
 
-###DELETE de uma tarefa:
+### DELETE de uma tarefa:
 Substituir {IdTarefa} pela tarefa desejada.
 ```
 curl  -X DELETE \
